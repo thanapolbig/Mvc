@@ -1,0 +1,436 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "2",
+    "title": "KMITL"
+  },
+  "host": "localhost:7777",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/Deposit": {
+      "post": {
+        "tags": [
+          "Deposit"
+        ],
+        "summary": "Add a ID ",
+        "description": "",
+        "operationId": "Deposit",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Acc_num",
+            "in": "formData",
+            "description": "enter Acc_num",
+            "required": true,
+            "type": "string",
+            "default": "2562-34-21-10001"
+          },
+          {
+            "name": "Pin",
+            "in": "formData",
+            "description": "enter Pin",
+            "required": true,
+            "type": "integer",
+            "default": 6969
+          },
+          {
+            "name": "Money",
+            "in": "formData",
+            "description": "enter Acc_num",
+            "required": true,
+            "type": "integer",
+            "default": 200
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/withdraw": {
+      "post": {
+        "tags": [
+          "withdraw"
+        ],
+        "summary": "Add a ID ",
+        "description": "",
+        "operationId": "withdraw",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Acc_num",
+            "in": "formData",
+            "description": "enter Acc_num",
+            "required": true,
+            "type": "string",
+            "default": "2562-34-21-10001"
+          },
+          {
+            "name": "Pin",
+            "in": "formData",
+            "description": "enter Pin",
+            "required": true,
+            "type": "integer",
+            "default": 6969
+          },
+          {
+            "name": "Money",
+            "in": "formData",
+            "description": "enter Acc_num",
+            "required": true,
+            "type": "integer",
+            "default": 200
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/transfer": {
+      "post": {
+        "tags": [
+          "transfer"
+        ],
+        "summary": "Add a Acc_NumP1,P2 ",
+        "description": "",
+        "operationId": "transfer",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Acc_numP1",
+            "in": "formData",
+            "description": "enter Acc_num",
+            "required": true,
+            "type": "string",
+            "default": "2562-34-21-10001"
+          },
+          {
+            "name": "Acc_numP2",
+            "in": "formData",
+            "description": "enter Acc_num",
+            "required": true,
+            "type": "string",
+            "default": "2562-34-21-10002"
+          },
+          {
+            "name": "Pin",
+            "in": "formData",
+            "description": "enter Pin",
+            "required": true,
+            "type": "integer",
+            "default": 6969
+          },
+          {
+            "name": "Money",
+            "in": "formData",
+            "description": "enter Money",
+            "required": true,
+            "type": "integer",
+            "default": 1000
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/getID": {
+      "post": {
+        "tags": [
+          "getID"
+        ],
+        "summary": "Add a ID ",
+        "description": "",
+        "operationId": "getID",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "formData",
+            "description": "enter ID",
+            "required": true,
+            "type": "string",
+            "default": "1"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/getFaculty": {
+      "post": {
+        "tags": [
+          "getID"
+        ],
+        "summary": "Add a Faculty_Id ",
+        "description": "",
+        "operationId": "getFaculty",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Pet object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/getFacultyinfo"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/UpdateGread": {
+      "post": {
+        "tags": [
+          "getID"
+        ],
+        "summary": "Add a ID and Grade ",
+        "description": "",
+        "operationId": "UpdateGread",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Pet object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateGreadinfo"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/delete": {
+      "post": {
+        "tags": [
+          "getID"
+        ],
+        "summary": "Add a ID and Grade ",
+        "description": "",
+        "operationId": "delete",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Pet object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/deleteinfo"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/RegisterUser": {
+      "post": {
+        "tags": [
+          "registerUser"
+        ],
+        "summary": "register a signgle Blockchain user",
+        "description": "Register Blockchain user for Organisation Store in MongoDB",
+        "operationId": "register for some users",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "bc_user",
+            "in": "formData",
+            "description": "Blockchain user",
+            "required": true,
+            "type": "string",
+            "default": "123456"
+          },
+          {
+            "name": "OrgDepartment",
+            "in": "formData",
+            "description": "Department in Organisation",
+            "required": true,
+            "type": "string",
+            "default": "org1.department1"
+          },
+          {
+            "name": "apikey",
+            "in": "header",
+            "description": "API Key an authorization for api server send with header request",
+            "required": true,
+            "type": "string",
+            "default": "558344f429d66e42b53ff6449710cea0f79211c2163d3d92b4180eaee3b6afd1"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CreateIDinfo": {
+      "type": "object",
+      "required": [
+        "Work_Status"
+      ],
+      "properties": {
+        "First_Name": {
+          "type": "string",
+          "example": "thanapol"
+        },
+        "Last_Name": {
+          "type": "string",
+          "example": "chimnam"
+        },
+        "Faculty_Id": {
+          "type": "integer",
+          "example": 2
+        },
+        "Gender": {
+          "type": "string",
+          "example": "M"
+        },
+        "Grade": {
+          "type": "integer",
+          "example": 0
+        },
+        "Student_Status": {
+          "type": "string",
+          "example": "W"
+        },
+        "Create_By": {
+          "type": "string",
+          "example": "thanapol"
+        },
+        "Update_By": {
+          "type": "string",
+          "example": "thanapol"
+        },
+        "Work_Status": {
+          "type": "string",
+          "example": "W"
+        }
+      }
+    },
+    "getFacultyinfo": {
+      "type": "object",
+      "required": [
+        "ID"
+      ],
+      "properties": {
+        "Faculty_Id": {
+          "type": "integer",
+          "example": 1
+        }
+      }
+    },
+    "UpdateGreadinfo": {
+      "type": "object",
+      "required": [
+        "ID"
+      ],
+      "properties": {
+        "ID": {
+          "type": "integer",
+          "example": 2
+        },
+        "Grade": {
+          "type": "integer",
+          "example": 3.13
+        }
+      }
+    },
+    "deleteinfo": {
+      "type": "object",
+      "required": [
+        "ID"
+      ],
+      "properties": {
+        "ID": {
+          "type": "integer",
+          "example": 1
+        }
+      },
+      "xml": {
+        "name": "Pet"
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
